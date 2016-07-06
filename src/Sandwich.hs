@@ -1,4 +1,9 @@
+{-# LANGUAGE ForeignFunctionInterface #-}
 module Sandwich where
 
-sandwich :: Int -> Int
+import           Foreign.C.Types (CInt(..))
+
+foreign export ccall "sandwich" sandwich :: CInt -> CInt
+
+sandwich :: CInt -> CInt
 sandwich = (+) 42
