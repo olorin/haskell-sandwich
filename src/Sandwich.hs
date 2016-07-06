@@ -1,4 +1,4 @@
-module Data.Sandwich where
+module Sandwich where
 
-sandwich :: Int
-sandwich = 42
+sandwich :: Int -> Int
+sandwich = (+) 42
